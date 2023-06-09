@@ -48,5 +48,18 @@ public class Demo
             .WorksAs("Developer")
             .Build();
         #endregion
+
+        #region FacetedBuilder
+        var pb = new FacetedBuilder.PersonBuilder();
+        FacetedBuilder.Person personn = pb
+            .Live.At("123 London Road")
+                 .In("London")
+                 .WithPostcode("SW12AC")
+            .Works.At("Fabrikam")
+                  .Asa("Engineer")
+                  .Earing(123000);
+        WriteLine(personn);
+        #endregion
+
     }
 }
