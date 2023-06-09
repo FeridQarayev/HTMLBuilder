@@ -1,4 +1,4 @@
-﻿using DesignPatternBuilder;
+﻿using DesignPatternBuilder.DesignPatterns;
 using System.Text;
 using static System.Console;
 
@@ -34,11 +34,19 @@ public class Demo
         #endregion
 
         #region StepwiseBuilder-Car
-        var car = CarBuilder.Create()  //ISpecifyCarType
+        var car = CarBuilder
+            .Create()                  //ISpecifyCarType
             .OfType(CarType.Crossover) //ISpecifyWheelSize
             .WithWheels(18)            //IBuildCar
             .Build(true);
 
+        #endregion
+
+        #region FunctioanlBuilder
+        var person = new PersonBuilder()
+            .Called("Ferid")
+            .WorksAs("Developer")
+            .Build();
         #endregion
     }
 }

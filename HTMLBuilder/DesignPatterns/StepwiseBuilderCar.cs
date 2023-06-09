@@ -1,4 +1,4 @@
-﻿namespace DesignPatternBuilder
+﻿namespace DesignPatternBuilder.DesignPatterns
 {
     #region Items
     public enum CarType
@@ -56,7 +56,7 @@
             }
             public Car Build(bool show)
             {
-                if(show) Console.WriteLine($"Car type: {Enum.GetName(car.Type)}, wheel size: {car.WheelSize}");
+                if (show) Console.WriteLine($"Car type: {Enum.GetName(car.Type)}, wheel size: {car.WheelSize}");
                 return car;
             }
         }
