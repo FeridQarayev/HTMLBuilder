@@ -1,5 +1,6 @@
 ﻿using DesignPatternBuilder.DesignPatterns;
 using System.Text;
+using static DesignPatternBuilder.DesignPatterns.ClassBuilder;
 using static System.Console;
 
 public class Demo
@@ -61,5 +62,11 @@ public class Demo
         WriteLine(personn);
         #endregion
 
+
+
+        var cb = new CodeBuilder("Person")
+            .AddField("Name", "string")
+            .AddField("Age", "int");
+        WriteLine(cb);
     }
 }
