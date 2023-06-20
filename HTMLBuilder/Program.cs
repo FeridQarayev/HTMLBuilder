@@ -63,10 +63,16 @@ public class Demo
         #endregion
 
 
-
+        #region CodeBuilderPractice
         var cb = new CodeBuilder("Person")
             .AddField("Name", "string")
             .AddField("Age", "int");
         WriteLine(cb);
+        #endregion
+
+        #region PointExample
+        var px = PointExampleForApi.NewCartesianPoint(1.0, Math.PI / 2);
+        WriteLine(px);
+        #endregion
     }
 }
