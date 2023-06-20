@@ -74,5 +74,18 @@ public class Demo
         var px = PointExampleForApi.NewCartesianPoint(1.0, Math.PI / 2);
         WriteLine(px);
         #endregion
+
+        #region Object Tracking and Bulk Replacement
+        var factory = new TrackingThemeFactory();
+        var theme1 = factory.CreateTheme(false);
+        var theme2 = factory.CreateTheme(true);
+        WriteLine(factory.Info);
+
+        var factory2 = new ReplaceableThemeFactory();
+        var magicTheme = factory2.CreateTheme(true);
+        WriteLine(magicTheme.Value.BgrColor);
+        factory2.ReplaceTheme(false);
+        WriteLine(magicTheme.Value.BgrColor);
+        #endregion
     }
 }
